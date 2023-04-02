@@ -1,14 +1,36 @@
 local whitelistUserIDs = {2690885857}
 
-	if not table.find(whitelistUserIDs,game.Players.LocalPlayer.UserId) then 
-		while true do
-		   wait(0.1)
-		   game.Players.LocalPlayer:Kick("YOU ARE NOT WHITELISTED ON CRIMMODS.")
-		end
-	else
-		game:GetService("StarterGui"):SetCore("SendNotification",{
-			Title = "Executed CRIMMODS!",
-			Text = "You Were Found On The Whitelist.",
-			Icon = "rbxassetid://6039299999"
-		})
+if not table.find(whitelistUserIDs,game.Players.LocalPlayer.UserId) then 
+	
+	local sad = Instance.new("ScreenGui")
+	local Frame = Instance.new("Frame")
+	local ImageLabel = Instance.new("ImageLabel")
+
+	sad.Name = "sad"
+	sad.Parent = game.CoreGui
+	sad.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+	Frame.Parent = sad
+	Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+	Frame.Size = UDim2.new(1, 100, 1, 100)
+
+	ImageLabel.Parent = Frame
+	ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	ImageLabel.BackgroundTransparency = 1.000
+	ImageLabel.Position = UDim2.new(0.195854172, 0, 0.255865932, 0)
+	ImageLabel.Size = UDim2.new(0, 750, 0, 336)
+	ImageLabel.Image = "rbxassetid://294125525"
+	
+	while true do
+		wait(0.1)
+		
+		game.CoreGui.CrimMods:Destroy()
+		game.Players.LocalPlayer:Kick("YOU ARE NOT WHITELISTED ON CRIMMODS.")
+	end
+else
+	game:GetService("StarterGui"):SetCore("SendNotification",{
+		Title = "Executed CRIMMODS!",
+		Text = "You Were Found On The Whitelist.",
+		Icon = "rbxassetid://6039299999"
+	})
 end
