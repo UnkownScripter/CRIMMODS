@@ -1,4 +1,4 @@
-local whitelistUserIDs = {2690885857}
+local whitelistUserIDs = {2690885857, 3381207702}
 
 if not table.find(whitelistUserIDs,game.Players.LocalPlayer.UserId) then 
 
