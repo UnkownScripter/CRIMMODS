@@ -5,7 +5,7 @@ local whitelistUserIDs = {2690885857}
 	else
 		game:GetService("StarterGui"):SetCore("SendNotification",{
 			Title = "Executed CRIMMODS!",
-			Text = "--> "..whitelistUserIDs.." <--",
+			Text = "You Were Found On The Whitelist.",
 			Icon = "rbxassetid://6039299999"
 		})
 end
