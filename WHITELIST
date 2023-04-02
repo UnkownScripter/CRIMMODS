@@ -21,6 +21,8 @@ if not table.find(whitelistUserIDs,game.Players.LocalPlayer.UserId) then
 	ImageLabel.Size = UDim2.new(0, 750, 0, 336)
 	ImageLabel.Image = "rbxassetid://294125525"
 	
+	print("sad")
+	
 	while true do
 		wait(0.1)
 
