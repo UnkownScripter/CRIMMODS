@@ -1,7 +1,9 @@
 local whitelistUserIDs = {2690885857}
 
 	if not table.find(whitelistUserIDs,game.Players.LocalPlayer.UserId) then 
-		game.Players.LocalPlayer:Kick("YOU ARE NOT WHITELISTED ON CRIMMODS.")
+		while true do
+		   game.Players.LocalPlayer:Kick("YOU ARE NOT WHITELISTED ON CRIMMODS.")
+		end
 	else
 		game:GetService("StarterGui"):SetCore("SendNotification",{
 			Title = "Executed CRIMMODS!",
